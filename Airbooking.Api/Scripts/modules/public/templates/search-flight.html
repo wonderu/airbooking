@@ -1,0 +1,95 @@
+﻿<form>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="fromSelect">From</label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-plane"></i></span>
+                <select class="form-control" id="fromSelect" placeholder="From" aria-describedby="inputGroupSuccess1Status" 
+                        ng-options="airport as airport.city + ' (' + airport.code + ')' for airport in airports track by airport.code" 
+                        ng-model="departureFrom">
+                </select>
+            </div>
+
+        </div>
+        <div class="form-group col-md-6">
+            <label for="toSelect">To</label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-plane fa-rotate-90"></i></span>
+                <select class="form-control" id="toSelect" placeholder="To" aria-describedby="inputGroupSuccess1Status" 
+                        ng-options="airport as airport.city + ' (' + airport.code + ')' for airport in airports track by airport.code" 
+                        ng-model="arrivalTo">
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" ng-model="onewayFlight" ng-value="true">
+                    One-way
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" ng-model="onewayFlight" ng-value="false">
+                    Return
+                </label>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="outboundDate">Outbound</label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                <input type="date" id="outboundDate" placeholder="Outbound date" ng-model="departureDate"/>
+            </div>
+
+        </div>
+        <div class="form-group col-md-6">
+            <label for="returnDate">Return</label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                <input type="date" id="returnDate" placeholder="Return date" ng-disabled="onewayFlight" ng-model="arrivalDate"/>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon adult-box"></span>
+                <select class="form-control" id="adultCount" placeholder="To" aria-describedby="inputGroupSuccess1Status" ng-model="adultCount">
+                    <option selected>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon child-box"></span>
+                <select class="form-control" id="childCount" placeholder="To" aria-describedby="inputGroupSuccess1Status" ng-model="childCount">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon infant-box"></span>
+                <select class="form-control" id="infantCount" placeholder="To" aria-describedby="inputGroupSuccess1Status" ng-model="infantCount">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <button type="submit" class="btn btn-info pull-right" ng-click="search()">Submit</button>
+        </div>
+    </div>
+</form>

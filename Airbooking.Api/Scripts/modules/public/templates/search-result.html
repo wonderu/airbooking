@@ -1,0 +1,71 @@
+﻿<form>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <b>Select flights</b>
+                    </h2>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-show="outboundFlights.length > 0">
+                        <h4>Outbound: {{searchInfo.departureFrom.city}} ({{searchInfo.departureFrom.code}}) to {{searchInfo.arrivalTo.city}} ({{searchInfo.arrivalTo.code}}) {{searchInfo.departureDate | date: 'd.MM.yyyy'}}</h4>
+                        <div>
+                            <div class="radio" ng-repeat="flight in outboundFlights">
+                                <label>
+                                    <input type="radio" name="optionsRadios" ng-click="selectOutboundFlight(flight)" >
+                                    {{flight.departureTime | date: 'H:mm'}} - {{flight.arrivalTime | date: 'H:mm'}} ({{flight.flightDurationInMinutes}}),
+                                    {{flight.flightCode}} ({{flight.airplaneModel}}) - ${{flight.price}}
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item" ng-show="returnFlights.length > 0">
+                        <h4>Return: {{searchInfo.arrivalTo.city}} ({{searchInfo.arrivalTo.code}}) to {{searchInfo.departureFrom.city}} ({{searchInfo.departureFrom.code}}) {{searchInfo.arrivalDate | date: 'd.MM.yyyy'}}</h4>
+                        <div>
+                            <div class="radio" ng-repeat="flight in returnFlights">
+                                <label>
+                                    <input type="radio" name="optionsRadios2" ng-click="selectReturnFlight(flight)">
+                                    {{flight.departureTime | date: 'H:mm'}} - {{flight.arrivalTime | date: 'H:mm'}} ({{flight.flightDurationInMinutes}}),
+                                    {{flight.flightCode}} ({{flight.airplaneModel}}) - ${{flight.price}}
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <b>Total Price: <span class="pull-right">${{searchInfo.totalPrice}}</span></b>
+                    </h2>
+                </div>
+                <div class="panel-body">
+                    <dl class="dl-horizontal">
+                        <dt>Adults</dt>
+                        <dd>{{searchInfo.adultCount}}</dd>
+                        <dt>Children</dt>
+                        <dd>{{searchInfo.childCount}}</dd>
+                        <dt>Infants</dt>
+                        <dd>{{searchInfo.infantCount}}</dd>
+                    </dl>
+                </div>
+                <div class="panel-footer">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-info pull-right" ng-click="submit()">Submit</button>
+                            <button type="submit" class="btn btn-default pull-left" ng-click="back()">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+
+        </div>
+    </div>
+</form>

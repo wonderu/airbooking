@@ -1,0 +1,49 @@
+﻿<div class="row" ng-show="state == 0">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <h2>Search Flight</h2>
+        <p>Book the flight.</p>
+
+        <search-flight submit="goTo(1)" search-info="searchInfo" outbound-flights="outboundFlights" return-flights="returnFlights" ></search-flight>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
+
+<div class="row" ng-show="state == 1">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <h2>Search result</h2>
+        <p>Select the flights.</p>
+
+        <search-result submit="goTo(2)" back="goTo(0)" outbound-flights="outboundFlights" return-flights="returnFlights" search-info="searchInfo" outbound-flight="outboundFlight" return-flight="returnFlight"></search-result>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
+
+<div class="row" ng-show="state == 2">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <h2>Passengers information and payments</h2>
+        <p>Pay attention to details.</p>
+        
+        <payment submit="goTo(3)" back="goTo(1)" passengers="passengers" card-info="cardInfo" search-info="searchInfo" outbound-flight="outboundFlight" return-flight="returnFlight"></payment>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>
+
+
+<div class="row" ng-show="state == 3">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <payment-result back="goTo(2)"></payment-result>
+    </div>
+    <div class="col-md-3">
+    </div>
+</div>

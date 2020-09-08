@@ -1,0 +1,166 @@
+2016-06-15 11:51:57.0692|INFO|Airbooking.Api.MvcApplication|Application start
+2016-06-15 12:01:52.6068|INFO|Airbooking.Api.Controllers.AirportController|Get all airports. RequestId='3ea7bb7a-6460-44d5-a8ed-87262201a54c ip=::1 url=https://localhost:44336/api/airport'
+2016-06-15 12:01:52.8100|INFO|Airbooking.Api.Controllers.AirportController|Returned all airports. Airports='[
+  {
+    "Name": "Alice Springs Railway",
+    "Code": "XHW",
+    "City": "Alice Springs",
+    "TimeZone": 0
+  },
+  {
+    "Name": "Agnew",
+    "Code": "AGW",
+    "City": "Agnew",
+    "TimeZone": 0
+  },
+  {
+    "Name": "Bremen",
+    "Code": "BRE",
+    "City": "Bremen",
+    "TimeZone": 0
+  },
+  {
+    "Name": "Cleve",
+    "Code": "CVC",
+    "City": "Cleve",
+    "TimeZone": 0
+  },
+  {
+    "Name": "Darwin",
+    "Code": "DRW",
+    "City": "Darwin",
+    "TimeZone": 0
+  },
+  {
+    "Name": "Blue Danube",
+    "Code": "LNZ",
+    "City": "Linz",
+    "TimeZone": 0
+  },
+  {
+    "Name": "Franz Josef Strauss",
+    "Code": "MUC",
+    "City": "Munich",
+    "TimeZone": 0
+  },
+  {
+    "Name": "Portland",
+    "Code": "PTJ",
+    "City": "Portland",
+    "TimeZone": 0
+  },
+  {
+    "Name": "Cote d'Azur International Airport",
+    "Code": "NCE",
+    "City": "Nice",
+    "TimeZone": 0
+  }
+]' RequestId='3ea7bb7a-6460-44d5-a8ed-87262201a54c ip=::1 url=https://localhost:44336/api/airport'
+2016-06-15 12:06:31.2231|INFO|Airbooking.Api.Controllers.FlightScheduleController|Try flight search: Request='{
+  "FromAirportCode": "AGW",
+  "ToAirportCode": "LNZ",
+  "StartDateTime": "2016-06-15T09:01:52.246Z",
+  "EndDateTime": null,
+  "AdultCount": 1,
+  "InfantCount": 0,
+  "ChildrenCount": 0
+}' RequestId='5e7fb219-0a79-4349-9a78-4a601fba0a3f ip=::1 url=https://localhost:44336/api/flightschedule'
+2016-06-15 12:06:31.7054|INFO|Airbooking.Api.Controllers.FlightScheduleController|Flight found: Response='{
+  "OutboundFlights": [
+    {
+      "FlightScheduleId": 18,
+      "FlightCode": "SU-991",
+      "FlightDurationInMinutes": 86,
+      "DepartureDate": "2016-06-15T00:00:00",
+      "AirplaneModel": "Airbus A321",
+      "DepartureTime": "04:37:00",
+      "DepartureAirportName": "Agnew",
+      "DepartureAirportCode": "AGW",
+      "DepartureAirportCity": "Agnew",
+      "DepartureAirportGate": "13",
+      "ArrivalTime": "06:03:00",
+      "ArrivalAirportName": "Blue Danube",
+      "ArrivalAirportCode": "LNZ",
+      "ArrivalAirportCity": "Linz",
+      "ArrivalAirportGate": "9",
+      "Price": 309.0
+    },
+    {
+      "FlightScheduleId": 20,
+      "FlightCode": "SU-929",
+      "FlightDurationInMinutes": 47,
+      "DepartureDate": "2016-06-15T00:00:00",
+      "AirplaneModel": "Airbus A321",
+      "DepartureTime": "05:11:00",
+      "DepartureAirportName": "Agnew",
+      "DepartureAirportCode": "AGW",
+      "DepartureAirportCity": "Agnew",
+      "DepartureAirportGate": "13",
+      "ArrivalTime": "05:58:00",
+      "ArrivalAirportName": "Blue Danube",
+      "ArrivalAirportCode": "LNZ",
+      "ArrivalAirportCity": "Linz",
+      "ArrivalAirportGate": "15",
+      "Price": 245.0
+    },
+    {
+      "FlightScheduleId": 17,
+      "FlightCode": "SU-958",
+      "FlightDurationInMinutes": 92,
+      "DepartureDate": "2016-06-15T00:00:00",
+      "AirplaneModel": "Airbus A321",
+      "DepartureTime": "07:22:00",
+      "DepartureAirportName": "Agnew",
+      "DepartureAirportCode": "AGW",
+      "DepartureAirportCity": "Agnew",
+      "DepartureAirportGate": "17",
+      "ArrivalTime": "08:54:00",
+      "ArrivalAirportName": "Blue Danube",
+      "ArrivalAirportCode": "LNZ",
+      "ArrivalAirportCity": "Linz",
+      "ArrivalAirportGate": "5",
+      "Price": 210.0
+    },
+    {
+      "FlightScheduleId": 19,
+      "FlightCode": "SU-122",
+      "FlightDurationInMinutes": 23,
+      "DepartureDate": "2016-06-15T00:00:00",
+      "AirplaneModel": "Airbus A321",
+      "DepartureTime": "07:36:00",
+      "DepartureAirportName": "Agnew",
+      "DepartureAirportCode": "AGW",
+      "DepartureAirportCity": "Agnew",
+      "DepartureAirportGate": "16",
+      "ArrivalTime": "07:59:00",
+      "ArrivalAirportName": "Blue Danube",
+      "ArrivalAirportCode": "LNZ",
+      "ArrivalAirportCity": "Linz",
+      "ArrivalAirportGate": "15",
+      "Price": 209.0
+    }
+  ],
+  "ReturnFlights": null
+}' RequestId='5e7fb219-0a79-4349-9a78-4a601fba0a3f ip=::1 url=https://localhost:44336/api/flightschedule'
+2016-06-15 12:06:58.5496|INFO|Airbooking.Api.Controllers.BookingController|Attempt to create new booking. Booking='{
+  "OutboundFlightScheduleId": 17,
+  "ReturnFlightScheduleId": null,
+  "Passengers": [
+    {
+      "BirthDate": "2012-12-11T21:00:00Z",
+      "FirstName": "khj",
+      "LastName": "uighijk",
+      "PassportNumber": "yuijko",
+      "Sex": 0
+    }
+  ],
+  "CreditCard": {
+    "CardNumber": "ftyguhij",
+    "CardHolder": "yugijok",
+    "ExpiryMonth": 2,
+    "ExpiryYear": 2019,
+    "SecretCode": 333
+  },
+  "Price": 210.0
+}' RequestId='29bf14c2-0079-4b41-841d-bb6023bc9901 ip=::1 url=https://localhost:44336/api/booking'
+2016-06-15 12:06:58.6298|INFO|Airbooking.Api.Controllers.BookingController|Created new booking. BookingId='1' RequestId='29bf14c2-0079-4b41-841d-bb6023bc9901 ip=::1 url=https://localhost:44336/api/booking'

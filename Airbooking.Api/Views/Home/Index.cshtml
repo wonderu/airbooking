@@ -1,0 +1,21 @@
+﻿@section Scripts {
+    <script src="~/Scripts/modules/app.js"></script>
+    <script src="~/Scripts/modules/public/module.js"></script>
+    <script src="~/Scripts/modules/public/services/airportService.js"></script>
+    <script src="~/Scripts/modules/public/services/flightService.js"></script>
+    <script src="~/Scripts/modules/public/services/bookingService.js"></script>
+    <script src="~/Scripts/modules/public/directives/searchFlight.js"></script>
+    <script src="~/Scripts/modules/public/directives/searchResult.js"></script>
+    <script src="~/Scripts/modules/public/directives/payment.js"></script>
+    <script src="~/Scripts/modules/public/directives/paymentResult.js"></script>
+    <script src="~/Scripts/modules/public/controllers/bookingController.js"></script>
+}
+
+<div data-ui-view="content"></div>
+
+<script type="text/javascript">
+    $(function () {
+        angular.bootstrap(document, ['app']);
+    });
+</script>
+

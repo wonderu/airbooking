@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="5f2e1470-2db4-4054-a2c4-97902ef6bb79" activeEnvironment="Default" name="AirbookingTest" soapui-version="5.2.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="1d87aa38-61ab-431a-ac6b-6d87c125871e" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://localhost:44336" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://localhost:44336</con:endpoint></con:endpoints><con:resource name="FlightSchedule" path="/api/FlightSchedule" id="21b83a42-3bc1-4e44-8b69-67e5ad05a72e"><con:settings/><con:parameters/><con:method name="FlightSchedule" id="56a1fadb-292e-4dec-ac1a-9b1c26b865d1" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:flig="https://localhost/api/FlightSchedule">flig:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:flig="https://localhost/api/FlightSchedule">flig:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Return" id="431db5d2-bd2a-40f4-bcc2-42c29a0824fd" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://localhost:44336</con:endpoint><con:request>{
+  "fromAirportCode": "MUC",
+  "toAirportCode": "AGW",
+  "startDateTime": "2016-06-14",
+  "endDateTime": "2016-06-16",
+  "adultCount": 2,
+  "infantCount": 0,
+  "childrenCount": 0
+}</con:request><con:originalUri>https://localhost/api/FlightSchedule</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request><con:request name="Oneway" id="431db5d2-bd2a-40f4-bcc2-42c29a0824fd" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://localhost:44336</con:endpoint><con:request>{
+  "fromAirportCode": "MUC",
+  "toAirportCode": "AGW",
+  "startDateTime": "2016-06-14",
+   "adultCount": 2,
+  "infantCount": 0,
+  "childrenCount": 0
+}</con:request><con:originalUri>https://localhost/api/FlightSchedule</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource><con:resource name="Airport" path="/api/Airport" id="eaa85b23-cb51-4ee9-8e30-6b523862e868"><con:settings/><con:parameters/><con:method name="GetAll" id="b63927d6-6191-406d-aac9-a552f56bfb5d" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="b10446e0-4d40-417f-89fe-12e642061ec0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://localhost:44336</con:endpoint><con:request/><con:originalUri>https://localhost/api/Airport</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="GetByCode" id="9bd3eb2f-fc0c-4cb6-8b9c-4d38450ee781" method="GET"><con:settings/><con:parameters><con:parameter><con:name>code</con:name><con:value>MUC</con:value><con:style>QUERY</con:style><con:default>MUC</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:air="https://localhost/api/Airport">air:Response</con:element></con:representation><con:request name="Request 1" id="3fb184b2-054a-4cdc-a413-c677bbaf461b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://localhost:44336</con:endpoint><con:request/><con:originalUri>https://localhost/api/Airport</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="Booking" path="/api/Booking" id="c7fdd448-d04e-40fb-b024-148c6acff7c8"><con:settings/><con:parameters/><con:method name="Method 1" id="033f6054-2b8d-46bb-8cf0-8d87cef8c332" method="PUT"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:book="https://localhost/api/Booking">book:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="7b12e7a2-b054-4f04-867b-8169dad836f6" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://localhost:44336</con:endpoint><con:request>{
+  "outboundFlightScheduleId": 1,
+  "returnFlightScheduleId": 1,
+  "passengers": [
+    {
+      "birthDate": "2016-06-14T00:10:51.1443207+03:00",
+      "firstName": "sample string 2",
+      "lastName": "sample string 3",
+      "passportNumber": "sample string 4",
+      "sex": 5
+    },
+    {
+      "birthDate": "2016-06-14T00:10:51.1443207+03:00",
+      "firstName": "sample string 2",
+      "lastName": "sample string 3",
+      "passportNumber": "sample string 4",
+      "sex": 5
+    }
+  ],
+  "creditCard": {
+    "cardNumber": "sample string 1",
+    "cardHolder": "sample string 2",
+    "expiryMonth": 3,
+    "expiryYear": 4,
+    "secretCode": 5
+  },
+  "price": 2.0
+}</con:request><con:originalUri>https://localhost/api/Booking</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
