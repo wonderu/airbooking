@@ -26,6 +26,8 @@ Design patterns and principles
  - Mock pattern can simulates the behavior of complex, real objects. Used in unit tests. 
  - Observer pattern helps AngularJS to control states
  - State pattern is used for changing pages in client side
+ 
+ Diagrams Source https://drive.google.com/drive/folders/0B7-q5CMqZrA3eGdHOG5DZlJkRFk?usp=sharing Please use diagrams.net (old draw.io) for viewing and editing.
 
 The application is built as designed. It has tier-architecture and built on DI-pattern. 
 It allows to test almost whole own code and divide definition and realiztion.
